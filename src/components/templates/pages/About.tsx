@@ -6,6 +6,7 @@ import { SET_THEME } from '../../../store/actions/actionTypes';
 import { Button } from '../../styled/button/Button.style';
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Row, Col } from '../../styled/Layout.style';
+import { setTheme } from '../../../store/actions/theme/themeActions';
 
 const About = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const About = () => {
       <Row>
         <Col position="center" padding="50px 0 20px 0">
           <Button
-            onClick={() => dispatch({ type: SET_THEME, payload: theme.name === 'light' ? darkTheme : lightTheme })}
+            onClick={() => dispatch(setTheme(theme.name === 'light' ? darkTheme : lightTheme))}
           >
             Change theme
           </Button>

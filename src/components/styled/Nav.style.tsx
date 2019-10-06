@@ -6,6 +6,7 @@ export const Nav = styled.nav<INavProps>`
   color: ${props => props.theme.colors.secondary};
   padding: 25px 0;
   border-bottom: 1px solid #000;
+  transition: all 0.3s;
   .navbar-brand {
     color: ${props => props.theme.colors.secondary};
     text-decoration: none;

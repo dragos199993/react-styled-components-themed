@@ -29,6 +29,7 @@ img {
   height: auto;
 }
 body {
+  transition: all 0.25s linear;
   @import url('href="https://fonts.googleapis.com/css?family="${props => (props.theme as ITheme).font }"');
   font-family: ${props => (props.theme as ITheme).font }, sans-serif;
 }
