@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent } from 'react';
 import Navbar from './Navbar';
 import { Global } from '../styled/Global.style';
 import { Route, Switch } from 'react-router';

@@ -2,7 +2,6 @@ import React from 'react';
 
 import darkTheme from '../../../theme/dark';
 import lightTheme from '../../../theme/light';
-import { SET_THEME } from '../../../store/actions/actionTypes';
 import { Button } from '../../styled/button/Button.style';
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Row, Col } from '../../styled/Layout.style';

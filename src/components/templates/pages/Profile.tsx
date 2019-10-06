@@ -13,37 +13,50 @@ const Profile = () => {
   const { bind: bindFont, value: font } = useInput('');
   const dispatch = useDispatch();
 
-  const submitNewTheme: (e: any) => void = (e) => {
+  const submitNewTheme: (e: any) => void = e => {
     e.preventDefault();
     const theme: ITheme = {
       name,
       colors: {
         primary,
-        secondary
+        secondary,
       },
-      font
-    }
+      font,
+    };
     dispatch(setTheme(theme));
-  }
+  };
 
   return (
     <Container>
       <Row>
-        <Col>
+        <Col position="center" padding="25px 0  ">
           <h1>Load a new theme</h1>
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col position="center">
           <form>
-            <input {...bindName} placeholder="Name" />
-            <input {...bindPrimary} placeholder="Primary color" />
-            <input {...bindSecondary} placeholder="Secondary color" />
-            <input {...bindFont} placeholder="Font name" />
-            <Button
-              secondary
-              onClick={(e: any) => submitNewTheme(e)}
-            >
+            <Row>
+              <Col position="center" padding="5px 0">
+                <input style={{ width: '340px', padding: '8px' }} {...bindName} placeholder="Name" />
+              </Col>
+            </Row>
+            <Row>
+              <Col position="center" padding="5px 0">
+                <input style={{ width: '340px', padding: '8px' }} {...bindPrimary} placeholder="Primary color" />
+              </Col>
+            </Row>
+            <Row>
+              <Col position="center" padding="5px 0">
+                <input style={{ width: '340px', padding: '8px' }} {...bindSecondary} placeholder="Secondary color" />
+              </Col>
+            </Row>
+            <Row>
+              <Col position="center" padding="5px 0">
+                <input style={{ width: '340px', padding: '8px' }} {...bindFont} placeholder="Font name" />
+              </Col>
+            </Row>
+            <Button secondary onClick={(e: any) => submitNewTheme(e)}>
               Load
             </Button>
           </form>
